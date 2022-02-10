@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu area start and add this appendChild and createElement</title>
+    <style>
+        .style{
+            border: 1px solid rebeccapurple;
+            background-color: gray;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,20 +28,20 @@
         </menu>
     </header>
     <main>
-        <section>
-            <article>
+        <section id="section">
+            <article class="style">
                 <h2>Heading-1</h2>
                 <p>This is a peragraph=1</p>
             </article>
-            <article>
+            <article class="style">
                 <h2>Heading-2</h2>
                 <p>This is a peragraph=2</p>
             </article>
-            <article>
+            <article class="style">
                 <h2>Heading-3</h2>
                 <p>This is a peragraph=3</p>
             </article>
-            <article>
+            <article class="style">
                 <h2>Heading-4</h2>
                 <p>This is a peragraph=4</p>
             </article>
@@ -48,10 +57,29 @@
 
         // blog create area 
         const article = document.createElement('article');
-        const h2 = document.createElement('h2');
-        h2.innerText = 'Extra Heading Area';
-        const p = document.createElement('p');
-        p.innerText = 'Extra Paragraph extra section';
+        article.classList.add('style');
+
+        // const h2 = document.createElement('h2');
+        // h2.innerText = 'Extra Heading Area';
+        // const p = document.createElement('p');
+        // p.innerText = 'Extra Paragraph extra section';
+
+        // article.appendChild(h2);
+        // article.appendChild(p);
+
+        const articles = document.getElementById('section');
+       
+
+        // extra cariculam 
+        article.innerHTML = `
+            <h2> Extra Heading Area</h2>
+            <p> Extra Paragraph extra section </p>`;
+
+        // article.appendChild()
+        articles.appendChild(article);
+
+        
+
 
 
     </script>
