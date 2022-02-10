@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom menupulation</title>
+
+    <!-- Style css  -->
+    <link rel="stylesheet" href="style.css">
+
+    
+
+</head>
+<body>
+    <header>
+        <h1>Headding</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Heading Tag - 1</h2>
+                <p>lorem1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis unde voluptas adipisci nisi obcaecati explicabo, amet dolorum impedit fugiat ea.</p>
+            </article>
+            <article>
+                <h2>Heading Tag - 2</h2>
+                <p>lorem2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab consequatur, maxime, neque provident illo ea impedit accusantium dolorum aliquid facilis incidunt quisquam repudiandae culpa numquam.</p>
+            </article>
+            <article>
+                <h2>Heading Tag - 3</h2>
+                <p>lorem3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus qui officiis non incidunt placeat repellendus nulla obcaecati harum blanditiis aliquam eligendi quod est assumenda sapiente, dicta dolorem aliquid quidem atque?</p>
+            </article>
+            <article>
+                <h2>Heading Tag - 4</h2>
+                <p>lorem4 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis sapiente, provident consectetur quidem soluta deleniti deserunt? Impedit asperiores officiis animi!</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        console.log("Hello World");
+
+        let textStorages = document.getElementsByTagName('h2');
+        
+        // console.log(textStorages);
+        for(const textStorage of textStorages){
+            let texts = textStorage.innerText;
+            console.log(texts);
+        }
+
+        let contentsTexts = document.getElementsByTagName('p');
+        for(const contentText of contentsTexts){
+            let contentStorage = contentText.innerText;
+            let contentStorageLength = contentStorage.length;
+
+            
+            console.log(contentStorageLength);
+            console.log(contentStorage);
+            
+        }
+    </script>
+</body>
+</html>

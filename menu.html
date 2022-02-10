@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu area start and add this appendChild and createElement</title>
+</head>
+<body>
+    <header>
+        <menu>
+            <ul id="menu">
+                <li>Blog-1</li>
+                <li>Blog-2</li>
+                <li>Blog-3</li>
+                <li>Blog-4</li>
+                <li>Blog-5</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Heading-1</h2>
+                <p>This is a peragraph=1</p>
+            </article>
+            <article>
+                <h2>Heading-2</h2>
+                <p>This is a peragraph=2</p>
+            </article>
+            <article>
+                <h2>Heading-3</h2>
+                <p>This is a peragraph=3</p>
+            </article>
+            <article>
+                <h2>Heading-4</h2>
+                <p>This is a peragraph=4</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        const li= document.createElement('li');
+        li.innerText = "Home";
+
+        const menus = document.getElementById('menu');
+        menus.appendChild(li);
+
+
+        // blog create area 
+        const article = document.createElement('article');
+        const h2 = document.createElement('h2');
+        h2.innerText = 'Extra Heading Area';
+        const p = document.createElement('p');
+        p.innerText = 'Extra Paragraph extra section';
+
+
+    </script>
+</body>
+</html>
