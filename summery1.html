@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom - Document Object Model</title>
+</head>
+<body>
+    <header>
+        <h1>Heading Area Start</h1>
+        <menu>
+            <h1>Friend List area start </h1>
+            <ul id="friendList">
+                <li>List item 1</li>
+                <li>List item 2</li>
+                <li>List item 3</li>
+                <li>List item 4</li>
+                <li>List item 5</li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <section id="pera">
+            <p id="new">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia nesciunt ipsa incidunt, libero vitae recusandae! Laudantium nulla sequi consequuntur, ipsum vero ducimus et architecto id error, possimus numquam similique pariatur!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia nesciunt ipsa incidunt, libero vitae recusandae! Laudantium nulla sequi consequuntur, ipsum vero ducimus et architecto id error, possimus numquam similique pariatur!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia nesciunt ipsa incidunt, libero vitae recusandae! Laudantium nulla sequi consequuntur, ipsum vero ducimus et architecto id error, possimus numquam similique pariatur!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia nesciunt ipsa incidunt, libero vitae recusandae! Laudantium nulla sequi consequuntur, ipsum vero ducimus et architecto id error, possimus numquam similique pariatur!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia nesciunt ipsa incidunt, libero vitae recusandae! Laudantium nulla sequi consequuntur, ipsum vero ducimus et architecto id error, possimus numquam similique pariatur!</p>
+        </section>
+        
+    </main>
+    <script>
+       
+
+        // add paragraph this section 
+        const p = document.createElement('p');
+        p.classList.add('rakib');
+        p.innerText = 'this is a extra paragraph';
+
+        const peras = document.getElementById('pera');
+
+        peras.appendChild(p);
+        // new style 
+        const rakibs = document.getElementsByClassName('rakib');
+        // console.log(rakibs);
+        for (const rakibh of rakibs){
+            // console.log(rakibh);
+            rakibh.style.border = '5px solid red';
+        }
+        // rakibs.style.backgroundColor = 'blue';
+        // add paragraph this section 
+
+
+        // Remove Friend list 
+        const friendList = document.getElementById('friendList');
+
+        const friend = friendList.children[2];
+        document.write(friend.innerText);
+        friendList.removeChild(friend);
+
+        const friends = document.createElement('li');
+        friends.innerText = 'Rakib hosen';
+        friendList.appendChild(friends);
+        
+
+
+
+        const paragraphs = document.getElementsByTagName('p');
+        // console.log(paragraphs);
+        for(const paragraphstore of paragraphs){
+            let paragraphstores = paragraphstore.style;
+            // let paragraphstores = paragraphstore.style.backgroundColor = 'black';
+            console.log(paragraphstores.color = 'white');
+            console.log(paragraphstores.backgroundColor = 'black');
+            console.log(paragraphstores.padding = '10px');
+            console.log(paragraphstores.margin = '10px');
+        }
+
+        
+         // new id 
+         const news = document.getElementById('new');
+
+        // news.style.backgroundColor = "red";
+        // news.style.borderRadius = '10px';
+        // news.style.padding = '20px';
+        // news.style.fontSize = '24px';
+        news.innerHTML = `
+            <h2> Javascript Heading area </h2>
+            <p> This is a javascript peragraph . my wish i am a javascript developer </p>
+        `;
+
+    </script>
+</body>
+</html>
